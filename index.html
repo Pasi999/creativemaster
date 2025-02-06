@@ -65,6 +65,29 @@
         .btn-primary:hover {
             background-color: #3b5ac3;
         }
+
+        /* Logos Container */
+        .logos-container {
+            display: flex;
+            overflow: hidden;
+            white-space: nowrap;
+            animation: scrollLogos 10s linear infinite;
+        }
+
+        .logos-container img {
+            margin-right: 30px;
+            height: 50px; /* Adjust the height of the logos */
+        }
+
+        /* Logo scrolling animation */
+        @keyframes scrollLogos {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-100%);
+            }
+        }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -88,6 +111,16 @@
         </div>
     </header>
     
+    <!-- Logos Sliding Section -->
+    <section class="py-6">
+        <div class="logos-container">
+            <img src="logo.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+            <img src="logo3.png" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </section>
+
     <!-- Home Section with Black Background for Text -->
     <section id="home" class="text-center py-20">
         <div class="black-bg">
@@ -111,7 +144,7 @@
     </section>
 
     <!-- Why Choose Us with Black Background for Text -->
-     <section id="services" class="py-20 text-center">
+    <section id="services" class="py-20 text-center">
         <div class="black-bg">
             <h2 class="text-3xl font-bold text-white">Why Choose Us?</h2>
             <p class="mt-4 text-lg text-white">We provide high-quality CVs tailored to your career goals.</p>
@@ -140,15 +173,9 @@
                 setInterval(() => {
                     index = (index + 1) % images.length;
                     document.getElementById("cvImage").src = images[index];
-                }, 1000); // Animation time changed to 1 second
+                }, 1000); // Animation time changed to 1 second per image
             </script>
-            <a href="https://wa.me/c/94720980876" class="btn-primary mt-6">View CV Samples</a>
         </div>
     </section>
-
-    <!-- Footer -->
-    <footer class="bg-indigo-600 text-white py-6 text-center">
-        <p>&copy; 2025 Creative Master. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
