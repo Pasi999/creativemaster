@@ -82,11 +82,21 @@
         /* Logo scrolling animation */
         @keyframes scrollLogos {
             0% {
-                transform: translateX(0);
+                transform: translateY(100%);
             }
             100% {
-                transform: translateX(-100%); /* Move completely to the left */
+                transform: translateY(-100%); /* Move completely upwards */
             }
+        }
+
+        /* Scroll container */
+        .logos-wrapper {
+            max-height: 100px; /* Adjust the height of the scrolling area */
+            overflow: hidden;
+        }
+
+        .logos-wrapper {
+            animation: scrollLogos 20s linear infinite alternate;
         }
     </style>
 </head>
@@ -95,7 +105,7 @@
     <header class="bg-indigo-600 text-white py-6">
         <div class="container mx-auto flex justify-between items-center px-6 flex-wrap">
             <img src="logo.png" alt="Creative Master Logo" class="h-12">
-            <h1 class="text-3xl font-bold mt-2 sm:mt-0">Creative Master</h1>
+            <h1 class="text-3xl font-bold mt-2 sm:mt-0">Creative Master Group</h1>
             <nav class="mt-4 sm:mt-0">
                 <ul class="flex space-x-6 sm:space-x-12">
                     <li><a href="#home" class="hover:text-indigo-300">Home</a></li>
@@ -171,17 +181,20 @@
 
     <!-- Logos Scrolling Section -->
     <section class="py-6">
-        <div class="logos-container">
-            <img src="logo.png" alt="Logo 1">
-            <img src="logo2.png" alt="Logo 2">
-            <img src="logo3.png" alt="Logo 3">
-            <img src="logo4.png" alt="Logo 4">
+        <div class="logos-wrapper">
+            <div class="logos-container">
+                <img src="logo.png" alt="Logo 1">
+                <img src="logo.png" alt="Logo 2">
+                <img src="logo.png" alt="Logo 3">
+                <img src="logo.png" alt="Logo 4">
+                <img src="logo.png" alt="Logo 5">
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="bg-indigo-600 text-white py-6 text-center">
-        <p>&copy; 2025 Creative Master. All Rights Reserved.</p>
+        <p>&copy; 2025 Creative Master Group. All Rights Reserved.</p>
     </footer>
 </body>
 </html>
