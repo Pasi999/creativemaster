@@ -18,18 +18,18 @@
 <body class="bg-gray-100 text-gray-900">
     <!-- Header -->
     <header class="bg-indigo-600 text-white py-6">
-        <div class="container mx-auto flex justify-between items-center px-6">
+        <div class="container mx-auto flex justify-between items-center px-6 flex-wrap">
             <img src="logo.png" alt="Creative Master Logo" class="h-12">
-            <h1 class="text-3xl font-bold">Creative Master</h1>
-            <nav>
-                <ul class="flex space-x-6">
+            <h1 class="text-3xl font-bold mt-2 sm:mt-0">Creative Master</h1>
+            <nav class="mt-4 sm:mt-0">
+                <ul class="flex space-x-6 sm:space-x-12">
                     <li><a href="#home" class="hover:text-indigo-300">Home</a></li>
                     <li><a href="#reviews" class="hover:text-indigo-300">Customer Reviews</a></li>
                     <li><a href="#services" class="hover:text-indigo-300">Why Choose Us</a></li>
                     <li><a href="#cv" class="hover:text-indigo-300">CV Items</a></li>
                 </ul>
             </nav>
-            <select onchange="translatePage(this.value)" class="bg-white text-black p-2 rounded">
+            <select onchange="translatePage(this.value)" class="bg-white text-black p-2 rounded mt-4 sm:mt-0">
                 <option value="en">English</option>
                 <option value="si">Sinhala</option>
             </select>
@@ -81,7 +81,7 @@
             setInterval(() => {
                 index = (index + 1) % images.length;
                 document.getElementById("cvImage").src = images[index];
-            }, 3000);
+            }, 1000); // Animation time changed to 1 second
         </script>
         <a href="https://wa.me/c/94720980876" class="mt-6 inline-block bg-indigo-500 text-white px-6 py-3 rounded-full text-lg">View CV Samples</a>
     </section>
