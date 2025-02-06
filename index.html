@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Master - CV Creation</title>
+    <title>Creative Master Group</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         function translatePage(lang) {
@@ -75,8 +75,8 @@
         }
 
         .logos-container img {
-            margin-right: 30px;
-            height: 50px; /* Adjust the height of the logos */
+            margin-right: 60px;
+            height: 100px; /* Adjust the height of the logos */
         }
 
         /* Logo scrolling animation */
@@ -85,7 +85,7 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(-100%);
+                transform: translateX(-100%); /* Move completely to the left */
             }
         }
     </style>
@@ -93,7 +93,7 @@
 <body class="bg-gray-100 text-gray-900">
     <!-- Header -->
     <header class="bg-indigo-600 text-white py-6">
-        <div class="container mx-auto flex justify-between items-center px-6 flex-wrap">
+        <div class="container mx-auto flex justify-between items-center px-10 flex-wrap">
             <img src="logo.png" alt="Creative Master Logo" class="h-12">
             <h1 class="text-3xl font-bold mt-2 sm:mt-0">Creative Master</h1>
             <nav class="mt-4 sm:mt-0">
@@ -111,16 +111,6 @@
         </div>
     </header>
     
-    <!-- Logos Sliding Section -->
-    <section class="py-6">
-        <div class="logos-container">
-            <img src="logo.png" alt="Logo 1">
-            <img src="logo2.png" alt="Logo 2">
-            <img src="logo3.png" alt="Logo 3">
-            <img src="logo4.png" alt="Logo 4">
-        </div>
-    </section>
-
     <!-- Home Section with Black Background for Text -->
     <section id="home" class="text-center py-20">
         <div class="black-bg">
@@ -173,9 +163,25 @@
                 setInterval(() => {
                     index = (index + 1) % images.length;
                     document.getElementById("cvImage").src = images[index];
-                }, 1000); // Animation time changed to 1 second per image
+                }, 1000); // Animation time changed to 1 second
             </script>
+            <a href="https://wa.me/c/94720980876" class="btn-primary mt-6">View CV Samples</a>
         </div>
     </section>
+
+    <!-- Logos Scrolling Section -->
+    <section class="py-6">
+        <div class="logos-container">
+            <img src="logo.png" alt="Logo 1">
+            <img src="logo2.png" alt="Logo 2">
+            <img src="logo3.png" alt="Logo 3">
+            <img src="logo4.png" alt="Logo 4">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-white py-6 text-center">
+        <p>&copy; 2025 Creative Master. All Rights Reserved.</p>
+    </footer>
 </body>
 </html>
