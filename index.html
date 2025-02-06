@@ -1,119 +1,81 @@
-Here is your **Sinhala-language** website code using **HTML, CSS (Tailwind CSS), and JavaScript**. This version includes all sections translated into **Sinhala**, including the **WhatsApp catalogue button**, customer reviews, and service details.  
-
----
-
-### **Sinhala Website Code for "Creative Master" CV Creation Business**
-```html
 <!DOCTYPE html>
-<html lang="si">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Creative Master - ලංකාවේම අඩුම මිලට  හොදම තත්වයේ,CV එකක් හදාගමු. 😊</title>
+    <title>Creative Master - CV Creation</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        function translatePage(lang) {
+            if (lang === 'si') {
+                window.location.href = "https://translate.google.com/translate?hl=si&sl=en&tl=si&u=" + encodeURIComponent(window.location.href);
+            } else {
+                location.reload();
+            }
+        }
+    </script>
 </head>
-
-<body class="font-sans bg-gray-50">
-
-    <!-- Header Section -->
+<body class="bg-gray-100 text-gray-900">
+    <!-- Header -->
     <header class="bg-indigo-600 text-white py-6">
         <div class="container mx-auto flex justify-between items-center px-6">
+            <img src="logo.png" alt="Creative Master Logo" class="h-12">
             <h1 class="text-3xl font-bold">Creative Master</h1>
             <nav>
                 <ul class="flex space-x-6">
-                    <li><a href="#home" class="hover:text-indigo-300">මුල් පිටුව</a></li>
-                    <li><a href="#reviews" class="hover:text-indigo-300">විමසුම්</a></li>
-                    <li><a href="#services" class="hover:text-indigo-300">අපගේ සේවාවන්</a></li>
-                    <li><a href="#contact" class="hover:text-indigo-300">සම්බන්ධ වන්න</a></li>
+                    <li><a href="#home" class="hover:text-indigo-300">Home</a></li>
+                    <li><a href="#reviews" class="hover:text-indigo-300">Customer Reviews</a></li>
+                    <li><a href="#services" class="hover:text-indigo-300">Why Choose Us</a></li>
+                    <li><a href="#cv" class="hover:text-indigo-300">CV Items</a></li>
                 </ul>
             </nav>
+            <select onchange="translatePage(this.value)" class="bg-white text-black p-2 rounded">
+                <option value="en">English</option>
+                <option value="si">Sinhala</option>
+            </select>
         </div>
     </header>
-
+    
     <!-- Home Section -->
-    <section id="home" class="text-center py-24 bg-indigo-100">
-        <h2 class="text-4xl font-bold text-gray-800 mb-6">Creative Master වෙත සාදරයෙන් පිළිගනිමු</h2>
-        <p class="text-xl text-gray-700 mb-6">ඔබේ වෘත්තිය අවශ්‍යතා සඳහා පරිපූර්ණ CV එකක් සාදන්න අපි උදව් කරන්නෙමු.</p>
-        <a href="https://wa.me/c/94720980876" target="_blank" class="bg-green-500 text-white py-2 px-6 rounded-md hover:bg-green-600">
-            මගේ WhatsApp නාමාවලිය බලන්න
-        </a>
+    <section id="home" class="text-center py-20">
+        <h2 class="text-4xl font-bold">Create Your Professional CV with Us!</h2>
+        <p class="mt-4 text-lg">Get a professional CV that stands out and boosts your career.</p>
+        <a href="https://wa.me/c/94720980876" class="mt-6 inline-block bg-green-500 text-white px-6 py-3 rounded-full text-lg">Get Started</a>
     </section>
-
-    <!-- Customer Reviews Section -->
-    <section id="reviews" class="py-16 bg-gray-100">
-        <h2 class="text-3xl font-bold text-center mb-6">අපගේ සේවා ගැන මතය</h2>
-        <div class="container mx-auto flex flex-wrap justify-center gap-6">
-            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-                <p class="text-gray-700 mb-4">"Creative Master මගින් මට ඉතාමත් වෘත්තීයමය CV එකක් ලබාදීමට හැකි වුණා. දැන් මට හොඳ රැකියාවක්!"</p>
-                <p class="font-semibold text-indigo-600">ජෝන් දො</p>
-            </div>
-            <div class="bg-white p-6 rounded-lg shadow-lg max-w-xs">
-                <p class="text-gray-700 mb-4">"අනේ මට Creative Master ගැන ස්තූතියි. මගේ CV එක බෙහෙවින්ම වැඩිදියුණු කළා!"</p>
-                <p class="font-semibold text-indigo-600">ජේන් ස්මිත්</p>
-            </div>
-        </div>
-
-        <!-- Facebook Review Links -->
-        <div class="text-center mt-8">
-            <p class="text-xl font-semibold mb-4">තවත් විමසුම් බලන්න:</p>
-            <a href="https://www.facebook.com/61558382502121/posts/pfbid0GUoz5mfj9XBqc6qaaBpsBBYgPFypGaxGPuSuhR4duGxFJFtRCNehBtGeET6KZHn2l/?app=fbl"
-                target="_blank" class="inline-block bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600 mb-4">
-                විමසුම 1
-            </a><br>
-            <a href="https://www.facebook.com/61563200887103/posts/pfbid0DW13u5KsGYqd4JuBqYrQPQQxdj21qcruuC4SDaii9wqt4L9xfs7bDDTni4juEs1Pl/?app=fbl"
-                target="_blank" class="inline-block bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600 mb-4">
-                විමසුම 2
-            </a><br>
-            <a href="https://www.facebook.com/share/p/or9qgYJ7LxnGYXHq/" target="_blank"
-                class="inline-block bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600 mb-4">
-                විමසුම 3
-            </a><br>
-            <a href="https://www.facebook.com/61552619633577/posts/pfbid02xKiqjFm9sLaDBFMg5a2TGBggU1JGqxhjaVWCJYgqoTYHoqSHvBemaVQxrPnEk5qEl/?app=fbl"
-                target="_blank" class="inline-block bg-indigo-500 text-white py-2 px-6 rounded-md hover:bg-indigo-600">
-                විමසුම 4
-            </a>
+    
+    <!-- Customer Reviews -->
+    <section id="reviews" class="py-20 bg-gray-200 text-center">
+        <h2 class="text-3xl font-bold">What Our Customers Say</h2>
+        <div class="mt-6 space-y-4">
+            <a href="https://www.facebook.com/61558382502121/posts/pfbid0GUoz5mfj9XBqc6qaaBpsBBYgPFypGaxGPuSuhR4duGxFJFtRCNehBtGeET6KZHn2l/?app=fbl" class="text-blue-600">Review 1</a>
+            <a href="https://www.facebook.com/61563200887103/posts/pfbid0DW13u5KsGYqd4JuBqYrQPQQxdj21qcruuC4SDaii9wqt4L9xfs7bDDTni4juEs1Pl/?app=fbl" class="text-blue-600">Review 2</a>
+            <a href="https://www.facebook.com/share/p/or9qgYJ7LxnGYXHq/" class="text-blue-600">Review 3</a>
+            <a href="https://www.facebook.com/61552619633577/posts/pfbid02xKiqjFm9sLaDBFMg5a2TGBggU1JGqxhjaVWCJYgqoTYHoqSHvBemaVQxrPnEk5qEl/?app=fbl" class="text-blue-600">Review 4</a>
         </div>
     </section>
-
-    <!-- Why Choose Us Section -->
-    <section id="services" class="py-16 bg-white">
-        <h2 class="text-3xl font-bold text-center mb-6">අපේ විශේෂත්වය</h2>
-        <div class="container mx-auto text-center">
-            <p class="text-xl text-gray-700 mb-6">Creative Master විදෙස් රැකියා සඳහා ඉල්ලුම් කරන අයෙක් නම් ඉල්ලුම් කරන රට අනුව නිවැරදි Format  එකට අනුව CV එක නිර්මාණය කර දීම..</p>
-            <ul class="space-y-4 text-left max-w-3xl mx-auto">
-                <li class="flex items-center">
-                    <span class="text-indigo-600 mr-3">✔️</span> CV OBJECTIVE / Personal Statement ගැලපෙන ලෙස Write කිරීම
-                </li>
-                <li class="flex items-center">
-                    <span class="text-indigo-600 mr-3">✔️</span> ඔබගේ පුද්ගලික තොරතුරු වල 100% සුරක්ෂිත බව.
-                </li>
-                <li class="flex items-center">
-                    <span class="text-indigo-600 mr-3">✔️</span> වේගවත් සේවාව සහ ඉතා සාධාරණ මිලගණන්.
-                </li>
-            </ul>
-        </div>
+    
+    <!-- Why Choose Us -->
+    <section id="services" class="py-20 text-center">
+        <h2 class="text-3xl font-bold">Why Choose Us?</h2>
+        <p class="mt-4 text-lg">We provide high-quality CVs tailored to your career goals.</p>
+        <ul class="mt-6 space-y-2">
+            <li>✅ Professional CV Design</li>
+            <li>✅ Quick Turnaround Time</li>
+            <li>✅ Affordable Pricing</li>
+            <li>✅ Expert Advice</li>
+        </ul>
     </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-16 bg-indigo-600 text-white">
-        <h2 class="text-3xl font-bold text-center mb-6">අපව සම්බන්ධ කරන්න</h2>
-        <div class="container mx-auto text-center">
-            <p class="text-xl mb-6">🔴 විදේශ රැකියා  ✈️ උසස් අධ්‍යාපන කටයුතු  👩🏻‍🎓 ආදී වූ ඕනෑම අවස්ථාවක් සඳහා අප අමතන්න.</p>
-            <a href="mailto:contact@creativemaster.com" class="bg-white text-indigo-600 py-2 px-6 rounded-md hover:bg-gray-200">Email යවන්න</a>
-        </div>
+    
+    <!-- CV Item View -->
+    <section id="cv" class="py-20 bg-gray-200 text-center">
+        <h2 class="text-3xl font-bold">View Our CV Samples</h2>
+        <p class="mt-4 text-lg">Choose from a variety of professional CV formats.</p>
+        <a href="https://wa.me/c/94720980876" class="mt-6 inline-block bg-indigo-500 text-white px-6 py-3 rounded-full text-lg">View CV Samples</a>
     </section>
-
-    <!-- Footer Section -->
-    <footer class="bg-gray-800 text-white py-6 text-center">
-        <p>&copy; 2025 Creative Master. සියලුම හිමිකම් ඇවිරිණි.</p>
+    
+    <!-- Footer -->
+    <footer class="bg-indigo-600 text-white py-6 text-center">
+        <p>&copy; 2025 Creative Master. All Rights Reserved.</p>
     </footer>
-
 </body>
-
 </html>
-```
-
----
-
-Now your **Creative Master CV website** is fully translated into **Sinhala** with all features like the **WhatsApp button**, **customer reviews**, and **service details**. 🚀
